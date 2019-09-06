@@ -443,6 +443,34 @@
                   "absent"
                ]
             },
+            "templates":{
+               "type":"string",
+               "enum":[
+                  "present",
+                  "absent"
+               ]
+            },
+            "geometry-templates":{
+               "type":"string",
+               "enum":[
+                  "present",
+                  "absent"
+               ]
+            },
+            "transform":{
+               "type":"string",
+               "enum":[
+                  "present",
+                  "absent"
+               ]
+            },
+            "extensions":{
+               "type":"string",
+               "enum":[
+                  "present",
+                  "absent"
+               ]
+            },
             "presentLoDs":{
                "$ref":"#/definitions/presentLoDs"
             },
