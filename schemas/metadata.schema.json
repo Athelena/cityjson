@@ -55,6 +55,36 @@
             }
          }
       },
+      "dates":{
+         "type":"object",
+         "properties":{
+            "date":{
+               "type":"string",
+               "format":"date"
+            },
+            "dateType":{
+               "type":"string",
+               "enum":[
+                  "creation",
+                  "publication",
+                  "revision",
+                  "expiry",
+                  "lastUpdate",
+                  "lastRevision",
+                  "nextUpdate",
+                  "unavailable",
+                  "inForce",
+                  "adopted",
+                  "deprecated",
+                  "superseded",
+                  "ValidityBegins",
+                  "validityExpires",
+                  "released",
+                  "distribution"
+               ]
+            }
+         }
+      },
       "thematicModels":{
         "type":"array",
         "items":{
@@ -185,8 +215,7 @@
             "type":"string"
          },
          "datasetReferenceDate":{
-            "type":"string",
-            "format":"date"
+            "$ref":"#/definitions/dates"
          },
          "geographicLocation":{
             "type":"string",
@@ -272,8 +301,7 @@
             "type":"string"
          },
          "metadataDateStamp":{
-            "type":"string",
-            "format":"date"
+            "$ref":"#/definitions/dates"
          },
          "metadataPointOfContact":{
             "$ref":"#/definitions/contactDetails"
