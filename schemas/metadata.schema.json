@@ -55,6 +55,13 @@
             }
          }
       },
+      "presence":{
+         "type":"string",
+         "enum":[
+            "present",
+            "absent"
+         ]
+      },
       "dates":{
          "type":"object",
          "properties":{
@@ -304,7 +311,7 @@
             "$ref":"#/definitions/dates"
          },
          "metadataPointOfContact":{
-            "$ref":"#/definitions/contactDetails"
+            "$ref":"#/definitions/contactDetail"
          },
          "lineage":{
             "type":"array",
@@ -458,39 +465,19 @@
                "$ref":"#/definitions/thematicModels"
             },
             "textures":{
-               "type":"string",
-               "enum":[
-                  "present",
-                  "absent"
-               ]
+               "$ref":"#/definitions/presence"
             },
             "materials":{
-               "type":"string",
-               "enum":[
-                  "present",
-                  "absent"
-               ]
+               "$ref":"#/definitions/presence"
             },
             "templates":{
-               "type":"string",
-               "enum":[
-                  "present",
-                  "absent"
-               ]
+               "$ref":"#/definitions/presence"
             },
             "geometry-templates":{
-               "type":"string",
-               "enum":[
-                  "present",
-                  "absent"
-               ]
+               "$ref":"#/definitions/presence"
             },
             "transform":{
-               "type":"string",
-               "enum":[
-                  "present",
-                  "absent"
-               ]
+               "$ref":"#/definitions/presence"
             },
             "extensions":{
                "type":"string",
@@ -572,11 +559,7 @@
                      "type":"object",
                      "properties":{
                         "presence":{
-                           "type":"string",
-                           "enum":[
-                              "present",
-                              "absent"
-                           ]
+                           "$ref":"#/definitions/presence"
                         },
                         "count":{
                            "type":"integer"
